@@ -48,7 +48,7 @@ app.use('/api/services', servicesRoute)
 app.use('/api/jobs', jobsRoute)
 
 
-const port = process.env.PORT || 2000
+const port = process.env.PORT || 5000
 
 app.listen(port, ()=>{
     console.log(`Server is running on port ${port}`);
