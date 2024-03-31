@@ -40,6 +40,10 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(cors())
 
+app.get('/test', async(req, res)=>{
+    res.json('Its working')
+})
+
 //route middlewares
 app.use('/api/auth', authRoute)
 app.use('/api/projects', projectsRoute)
