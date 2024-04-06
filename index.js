@@ -51,16 +51,10 @@ app.use('/api/categories', categoriesRoute)
 app.use('/api/services', servicesRoute)
 app.use('/api/jobs', jobsRoute)
 
-const options = {
-    key: fs.readFileSync('server.key'),
-    cert: fs.readFileSync('path/to/server.crt')
-};
-
-const httpsServer = https.createServer(options, app);
 
 const port = process.env.PORT || 2000
 
-httpsServer.listen(port, ()=>{
+app.listen(port, ()=>{
     console.log(`Server is running on port ${port}`);
     connection()
 })
